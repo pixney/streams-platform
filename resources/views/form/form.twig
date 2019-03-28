@@ -13,11 +13,12 @@
         {{ form.open({
             'class': 'form ' ~ form.options.class,
         })|raw }}
-
+        {# {% include "streams::form/partials/controls" with {"class": "-top"}%} #}
         {#{% include "streams::form/partials/controls" with {"position": "top"} %}#}
         {% include form.options.get('heading', "streams::form/partials/heading") %}
         {% include "streams::form/partials/layout" %}
-        {% include "streams::form/partials/controls" %}
+        {% include "streams::form/partials/controls" with {"class": "-bottom"} %}
+        
 
         {{ form.close()|raw }}
 
