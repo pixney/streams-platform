@@ -1,4 +1,6 @@
-<?php namespace Anomaly\Streams\Platform\Ui\Icon;
+<?php
+
+namespace Anomaly\Streams\Platform\Ui\Icon;
 
 /**
  * Class IconRegistry
@@ -9,7 +11,6 @@
  */
 class IconRegistry
 {
-
     /**
      * Available icon.
      *
@@ -17,7 +18,7 @@ class IconRegistry
      */
     protected $icons = [
         'addon'                => 'fa fa-puzzle-piece',
-        'adjust'               => 'glyphicons glyphicons-adjust-alt',
+        'adjust'               => 'fa fa-sliders-h',
         'airplane'             => 'glyphicons glyphicons-airplane',
         'amex'                 => 'fa fa-cc-amex',
         'arrows-h'             => 'fa fa-arrows-h',
@@ -49,7 +50,7 @@ class IconRegistry
         'conversation'         => 'glyphicons glyphicons-conversation',
         'credit-card'          => 'glyphicons glyphicons-credit-card',
         'cubes'                => 'fa fa-cubes',
-        'dashboard'            => 'fa fa-dashboard',
+        'dashboard'            => 'fas fa-tachometer-alt',
         'database'             => 'fa fa-database',
         'diners-club'          => 'fa  fa-cc-diners-club',
         'discover'             => 'fa fa-cc-discover',
@@ -66,7 +67,7 @@ class IconRegistry
         'facebook-square'      => 'fa fa-facebook-square',
         'facetime-video'       => 'glyphicons glyphicons-facetime-video',
         'file'                 => 'fa fa-file-o',
-        'file-image'           => 'fa fa-file-image-o',
+        'file-image'           => 'fa fa-sd-card',
         'film'                 => 'fa fa-film',
         'filter'               => 'fa fa-filter',
         'fire'                 => 'glyphicons glyphicons-fire',
@@ -83,17 +84,17 @@ class IconRegistry
         'keys'                 => 'glyphicons glyphicons-keys',
         'language'             => 'fa fa-language',
         'laptop'               => 'fa fa-laptop',
-        'link'                 => 'glyphicons glyphicons-link',
+        'link'                 => 'fa fa-link',
         'list-alt'             => 'fa fa-list-alt',
         'list-ol'              => 'fa fa-list-ol',
         'list-ul'              => 'fa fa-list-ul',
         'lock'                 => 'fa fa-lock',
         'locked'               => 'fa fa-lock',
-        'magic'                => 'glyphicons glyphicons-magic',
+        'magic'                => 'fa fa-magic',
         'map-marker'           => 'fa fa-map-marker',
         'mastercard'           => 'fa fa-cc-mastercard',
         'minus'                => 'fa fa-minus',
-        'newspaper'            => 'fa fa-newspaper-o',
+        'newspaper'            => 'far fa-newspaper',
         'options'              => 'fa fa-options',
         'order'                => 'glyphicons glyphicons-sort',
         'paperclip'            => 'glyphicons glyphicons-paperclip',
@@ -112,7 +113,7 @@ class IconRegistry
         'question-circle'      => 'fa fa-question-circle',
         'quote-left'           => 'fa fa-quote-left',
         'quote-right'          => 'fa fa-quote-right',
-        'redo'                 => 'glyphicons glyphicons-redo',
+        'redo'                 => 'fas fa-redo',
         'refresh'              => 'fa fa-refresh',
         'repeat'               => 'fa fa-repeat',
         'retweet'              => 'glyphicons glyphicons-retweet',
