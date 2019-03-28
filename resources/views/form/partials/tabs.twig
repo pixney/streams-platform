@@ -1,4 +1,4 @@
-<ul class="nav nav-sections {{ stacked ? 'nav-stacked' }}">
+<ul class="nav nav-tabs  nav-pills {{ stacked ? 'flex-column' }}">
     {% spaceless %}
         {% for slug, tab in tabs %}
             <li class="nav-item {{ loop.first ? ' active' }}">
@@ -11,9 +11,9 @@
     {% endspaceless %}
 </ul>
 
-<div class="card-block card-body">
+<div class="card-body tab-content">
     {% for slug, tab in section.tabs %}
-        <div class="tab__pane tab-pane {{ loop.first ? ' active' }}" id="tab-{{ form.options.prefix }}{{ tab.slug ?: slug }}">
+        <div class="tab-pane {{ loop.first ? ' active' }}" id="tab-{{ form.options.prefix }}{{ tab.slug ?: slug }}">
             {% if tab.view %}
                 {% include tab.view %}
             {% elseif tab.html %}
