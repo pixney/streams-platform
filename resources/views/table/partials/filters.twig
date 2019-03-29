@@ -1,3 +1,4 @@
+
 {% if not table.filters.empty() %}
     <div class="o-section">
         {{ form_open({'method': 'get', 'id': 'filters', 'url': url_full(), 'class': 'form-inline'}) }}
@@ -6,16 +7,16 @@
         <input type="hidden" name="{{ table.options.prefix }}page" value="1">
 
         {% for filter in table.filters %}
-            <div class="form-group">
+            <div class="form-group mr-1">
                 {{ filter.input|raw }}
             </div>
         {% endfor %}
 
-        <button type="submit" class="btn btn-success">
+        <button type="submit" class="btn btn-success ml-3 mr-1">
             {{ icon(table.options.filters.filter_icon ?: 'filter') }}
             {{ trans(table.options.filters.filter_text ?: 'streams::button.filter') }}
         </button>
-        <a href="{{ url_current() }}{{ request_has('view') ? '?view=' ~ request_get('view') }}" class="btn btn-inverse">
+        <a href="{{ url_current() }}{{ request_has('view') ? '?view=' ~ request_get('view') }}" class="btn btn-danger">
             {{ icon(table.options.filters.clear_icon ? table.options.filters.clear_icon) }}
             {{ trans(table.options.filters.clear_text ?: 'streams::button.clear') }}
         </a>
