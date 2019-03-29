@@ -7,7 +7,6 @@
 {% if table.options.sortable %}
 {{ asset_add("scripts.js", "streams::js/table/sortable.js") }}
 {% endif %}
-
 <div class="{{ table.options.container_class ?: 'container-fluid' }}">
 
     {{ view("streams::table/partials/filters", {'table': table}) }}
