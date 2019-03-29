@@ -4,7 +4,7 @@
     {% if button.dropdown is empty and not button.parent %}
 
         {# Render normal buttons as an anchor #}
-        <{{ button.tag ?: 'a' }} class="btn btn-{{ button.size }} btn-{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }} {{ html_attributes(button.attributes) }}>
+        <{{ button.tag ?: 'a' }} class="button -{{ button.size }} -{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }} {{ html_attributes(button.attributes) }}>
             {{ button.icon ? icon(button.icon)|raw }}
             {{ trans(button.text)|raw }}
         </{{ button.tag ?: 'a' }}>
@@ -16,17 +16,17 @@
         <div class="btn-group {{ button.dropup ? 'dropup' }}">
 
             {% if button.attributes.href %}
-                <a class="btn btn-{{ button.size }} btn-{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }} {{ html_attributes(button.attributes) }}>
+                <a class="button -{{ button.size }} -{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }} {{ html_attributes(button.attributes) }}>
                     {{ button.icon ? icon(button.icon)|raw }}
                     {{ trans(button.text)|raw }}
                 </a>
 
-                <a class="dropdown-toggle-split btn btn-{{ button.size }} btn-{{ button.type }} {{ button.disabled ? 'disabled' }}"
+                <a class="dropdown-toggle-split button -{{ button.size }} -{{ button.type }} {{ button.disabled ? 'disabled' }}"
                    data-toggle="dropdown" {{ button.disabled ? 'disabled' }}>
                     {{ icon('fa fa-caret-down') }}
                 </a>
             {% else %}
-                <a class="dropdown-toggle btn btn-{{ button.size }} btn-{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }}
+                <a class="dropdown-toggle button -{{ button.size }} -{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }}
                    data-toggle="dropdown" {{ html_attributes(button.attributes) }}>
                     {{ button.icon ? icon(button.icon)|raw }}
                     {{ trans(button.text)|raw }}
