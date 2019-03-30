@@ -4,6 +4,12 @@
     {% if button.dropdown is empty and not button.parent %}
 
         {# Render normal buttons as an anchor #}
+        {# {% if button.text=="Delete" %}
+        {{dd(button)}}    
+        {% endif %} #}
+        
+
+        
         <{{ button.tag ?: 'a' }} class="button -{{ button.size }} -{{ button.type }} {{ button.disabled ? 'disabled' }} {{ button.class }}" {{ button.disabled ? 'disabled' }} {{ html_attributes(button.attributes) }}>
             {{ button.icon ? icon(button.icon)|raw }}
             {{ trans(button.text)|raw }}
@@ -13,6 +19,9 @@
 
     {# Render dropdown type buttons. #}
     {% if button.dropdown %}
+ 
+
+        
         <div class="btn-group {{ button.dropup ? 'dropup' }}">
 
             {% if button.attributes.href %}
@@ -64,6 +73,7 @@
                 {% endfor %}
             </ul>
         </div>
+    
     {% endif %}
 
 {% endfor %}
