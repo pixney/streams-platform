@@ -11,11 +11,11 @@
             </div>
         {% endfor %}
 
-        <button type="submit" class="btn btn-success ml-3 mr-1">
+        <button type="submit" class="button -sm -success ml-3 mr-1">
             {{ icon(table.options.filters.filter_icon ?: 'filter') }}
             {{ trans(table.options.filters.filter_text ?: 'streams::button.filter') }}
         </button>
-        <a href="{{ url_current() }}{{ request_has('view') ? '?view=' ~ request_get('view') }}" class="btn btn-danger">
+        <a href="{{ url_current() }}{{ request_has('view') ? '?view=' ~ request_get('view') }}" class="button -sm -danger">
             {{ icon(table.options.filters.clear_icon ? table.options.filters.clear_icon) }}
             {{ trans(table.options.filters.clear_text ?: 'streams::button.clear') }}
         </a>
