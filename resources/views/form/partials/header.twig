@@ -1,6 +1,5 @@
 {% if section.title %}
-    <div class="card-header">
-        <h5 class="card-title">
+        <h5>
 
             {{ section.icon ? icon(section.icon) }}
 
@@ -8,12 +7,10 @@
 
             {% if section.description %}
 
-                <br>
-
                 <small>
                     {{ trans(section.description)|raw }}
                 </small>
             {% endif %}
         </h5>
-    </div>
+
 {% endif %}
