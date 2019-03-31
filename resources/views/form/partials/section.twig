@@ -1,12 +1,12 @@
-<div class="form__section{{ section.stacked ? ' d-flex' }}" {{ html_attributes(section.attributes) }}>
+<div class="o-form__section {{ section.stacked ? 'd-flex' }}" {{ html_attributes(section.attributes) }}>
 
     {% include "streams::form/partials/header" with {"section": section} %}
 
     {% if section.fields %}
 
-        <div class="card-block card-body">
+      
             {% include "streams::form/partials/fields" with {"fields": section.fields} %}
-        </div>
+      
 
     {% elseif section.tabs %}
 
@@ -20,9 +20,9 @@
 
     {% elseif section.rows %}
 
-        <div class="card-block card-body">
+        
             {% include "streams::form/partials/rows" with {"rows": section.rows} %}
-        </div>
+        
 
     {% endif %}
 

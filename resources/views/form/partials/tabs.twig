@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs {{ stacked ? 'flex-column -stacked' }}" role="tablist">
+<ul class="m-nav nav nav-tabs {{ stacked ? 'flex-column -stacked' }}" role="tablist">
     {% spaceless %}
         {% for slug, tab in tabs %}
             <li class="nav-item">
@@ -12,7 +12,7 @@
     {% endspaceless %}
 </ul>
 
-<div class="tab-content">
+<div class="m-tab__content tab-content">
     {% for slug, tab in section.tabs %}
         <div class="tab-pane fade {{ loop.first ? 'active show' }}" id="tab-{{ form.options.prefix }}{{ tab.slug ?: slug }}" aria-labelledby="{{ trans(tab.title) }}">
             {% if tab.view %}

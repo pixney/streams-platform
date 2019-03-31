@@ -1,6 +1,6 @@
 <div class="{{ section.class }}" {{ html_attributes(section.attributes) }}>
 
-    <ul class="nav nav-tabs">
+    <ul class="m-nav nav nav-tabs">
         {% for slug, tab in section.tabs %}
             <li class="{{ loop.first ? 'active' }}">
                 <a href="#tab-{{ form.options.prefix }}{{ tab.slug }}" data-toggle="tab">
@@ -11,7 +11,7 @@
         {% endfor %}
     </ul>
 
-    <div class="tab-content">
+    <div class="m-tab__content tab-content">
         {% for slug, tab in section.tabs %}
             <div class="tab-pane {{ loop.first ? 'active' }}" id="tab-{{ form.options.prefix }}{{ tab.slug }}">
                 {% if tab.view %}
