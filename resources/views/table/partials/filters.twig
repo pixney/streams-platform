@@ -1,5 +1,5 @@
 {% if not table.filters.empty() %}
-    <div class="o-section">
+    <div class="o-section -filters">
         {{ form_open({'method': 'get', 'id': 'filters', 'url': url_full(), 'class': 'form-inline'}) }}
         <input type="hidden" name="{{ table.options.prefix }}limit" value="{{ table.options.limit }}">
         <input type="hidden" name="{{ table.options.prefix }}view" value="{{ table.views.active().getSlug() }}">
@@ -10,8 +10,8 @@
                 {{ filter.input|raw }}
             </div>
         {% endfor %}
-
-        <button type="submit" class="button -sm -success ml-3 mr-3">
+        <div class="btn-group ml-3" role="group" aria-label="Basic example">
+        <button type="submit" class="button -sm -success">
             {{ icon(table.options.filters.filter_icon ?: 'filter') }}
             {{ trans(table.options.filters.filter_text ?: 'streams::button.filter') }}
         </button>
@@ -19,6 +19,7 @@
             {{ icon(table.options.filters.clear_icon ? table.options.filters.clear_icon) }}
             {{ trans(table.options.filters.clear_text ?: 'streams::button.clear') }}
         </a>
+        </div>
         {{ form_close() }}
     </div>
 {% endif %}

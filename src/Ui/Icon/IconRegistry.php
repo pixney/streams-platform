@@ -155,7 +155,7 @@ class IconRegistry
         'user'                  => 'fa fa-user',
         'users'                 => 'fa fa-users',
         'video-camera'          => 'fa fa-video-camera',
-        'warning'               => 'fa fa-warning',
+        'warning'               => 'fas fa-exclamation-triangle',
         'wrench'                => 'fa fa-wrench',
         'youtube'               => 'fa fa-youtube',
     ];

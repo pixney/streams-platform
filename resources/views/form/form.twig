@@ -1,16 +1,14 @@
 {{ asset_add("scripts.js", "streams::js/form/form.js") }}
 {{ asset_add("scripts.js", "streams::js/form/keyboard.js") }}
 {{ asset_add("scripts.js", "streams::js/form/translations.js") }}
-<h1>
-        resources/views/form/form.twig  s
-</h1>
+
 {% if not form.options.locked %}
     {{ asset_add("scripts.js", "streams::js/form/lock.js") }}
 {% endif %}
 
 {% block content %}
 
-    <div class="container-fluid">
+    <div class="o-section -form">
 
         {{ form.open({
             'class': 'form ' ~ form.options.class,

@@ -12,7 +12,7 @@
     {% endspaceless %}
 </ul>
 
-<div class="card-body tab-content">
+<div class="tab-content">
     {% for slug, tab in section.tabs %}
         <div class="tab-pane fade {{ loop.first ? 'active show' }}" id="tab-{{ form.options.prefix }}{{ tab.slug ?: slug }}" aria-labelledby="{{ trans(tab.title) }}">
             {% if tab.view %}

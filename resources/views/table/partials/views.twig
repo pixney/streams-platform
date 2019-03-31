@@ -1,9 +1,9 @@
 {% if not table.views.empty() %}
-<div class="o-section">
+<div class="o-section -views">
     <ul class="m-list -reset -horizontal">
         {% for view in table.views %}
-        <li>
-            <a class="{{ view.isActive() ? '-active ' }}{{ view.class }}" {{ html_attributes(view.attributes) }}>
+        <li class="{{ view.isActive() ? '-active ' }}">
+            <a class="{{ view.class }}" {{ html_attributes(view.attributes) }}>
                 {{ view.icon ? icon(view.icon)|raw }} {{ trans(view.getText()) }}
                 {% if view.label %}
                 <span class="tag tag-{{ view.context }}">

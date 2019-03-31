@@ -15,13 +15,13 @@
             {{ trans(button.text)|raw }}
         </{{ button.tag ?: 'a' }}>
 
+        
+
     {% endif %}
 
     {# Render dropdown type buttons. #}
     {% if button.dropdown %}
  
-
-        
         <div class="btn-group {{ button.dropup ? 'dropup' }}">
 
             {% if button.attributes.href %}

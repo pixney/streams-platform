@@ -12,7 +12,7 @@
         {% if not table.actions.empty() %}
         <td>
             <div class="a-input">
-                <input  id="id-{{ row.key }}" type="checkbox" name="{{ row.table.options.prefix }}id[]"
+                <input id="id-{{ row.key }}" type="checkbox" name="{{ row.table.options.prefix }}id[]"
                     value="{{ row.key }}" />
                 <label for="id-{{ row.key }}">
                     <svg width="16" height="14" viewBox="0 0 16 14">
@@ -24,13 +24,14 @@
         {% endif %}
 
         {% for column in row.columns %}
+
         <td data-title="{{ trans(column.heading) }}" class="{{ column.class }}"
             {{ html_attributes(column.attributes) }}>
             {{ column.value|raw }}
         </td>
         {% endfor %}
 
-        <td class="text-lg-right">
+        <td>
             {{ buttons(row.buttons)|raw }}
         </td>
 
