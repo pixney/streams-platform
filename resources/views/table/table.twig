@@ -43,9 +43,11 @@
 {% else %}
 
 {% block no_results %}
-<div class="o-section">
+<div class="o-section -empty">
     {# TODO: Let's do something about these messages to make em look better #}
-    {{ trans(table.options.get('no_results_message', 'streams::message.no_results')) }}
+    <div>
+            {{ trans(table.options.get('no_results_message', 'streams::message.no_results')) }}
+    </div>
 </div>
 {% endblock %}
 
