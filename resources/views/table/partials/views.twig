@@ -1,6 +1,6 @@
 {% if not table.views.empty() %}
 <div class="o-section -views">
-    <ul class="m-list -reset -horizontal">
+    <ul class="m-list -reset -horizontal -tabs">
         {% for view in table.views %}
         <li class="{{ view.isActive() ? '-active ' }}">
             <a class="{{ view.class }}" {{ html_attributes(view.attributes) }}>
