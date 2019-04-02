@@ -1,4 +1,4 @@
-<div class="o-form__section {{ section.stacked ? 'd-flex' }} {{section.tabs ? '-tabs'}}" {{ html_attributes(section.attributes) }}>
+<div class="o-form__section {{section.title ? '-title'}}{{ section.stacked ? 'd-flex' }} {{section.tabs ? '-tabs'}}" {{ html_attributes(section.attributes) }}>
 
     {% include "streams::form/partials/header" with {"section": section} %}
 

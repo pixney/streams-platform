@@ -1,12 +1,8 @@
 {% if section.title %}
         <h5>
-
             {{ section.icon ? icon(section.icon) }}
-
             {{ trans(section.title)|raw }}
-
             {% if section.description %}
-
                 <small>
                     {{ trans(section.description)|raw }}
                 </small>
